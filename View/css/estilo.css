@@ -1,0 +1,70 @@
+header{
+    text-align: center;
+    background: #99ff33;
+    padding: 12px;
+    font-family: Arial;
+}
+header h1{
+    margin: 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+}
+nav button{
+    background: #00ff33;
+    padding: 8px;
+    border: none;
+    font-family: Verdana;
+    font-weight: bold;
+}
+nav button:active{
+    background: #009933;
+}
+body{
+    margin: 0px;
+    background: #ffff99;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana;
+}
+@media only screen and (min-width: 480px){
+    #content{
+        flex-direction: row;
+        margin-top: 8px;
+        align-items: flex-start; 
+    }
+    nav{
+        flex-direction: column;
+        padding: 0px;
+        margin-left: 8px;
+    }
+    nav button{
+        margin-bottom: 8px;
+        padding: 20px;
+    }
+    aside{
+        height: 300px;
+        margin: 0px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+section{
+    padding: 8px;
+    margin: 8px;
+    margin-top: 0px;
+    background: #33cc00;
+}
+article p{
+    text-align: justify;
+    border-left: 4px solid gray;
+    padding-left: 8px;
+}
+aside{
+    border: 1px solid black;
+    margin: 8px;
+}
