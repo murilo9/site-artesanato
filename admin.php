@@ -8,13 +8,25 @@
     <body>
         <?php
             session_start();
-            if(!isset($_SESSION["logged"])){
+            if(isset($_GET["sair"])){   //Primeiro verifica se possui o token de sair:
+                session_unset();  //Destrói a session
+                session_destroy();
+                header("location: index.php");
+                die();
+            }
+            if(!isset($_SESSION["logged"])){    //Se o usuário não estiver logado, exibe o form de login:
                 echo "<form action='Controller/controller.php' method='post'>"
                         . "<input name='token' type='hidden' value='login'>"
                         . "Login: <input name='inputLogin' type='text'><br>"
                         . "Senha: <input name='inputSenha' type='password'><br>"
                         . "<input type='submit' value='Entrar'>"
                     . "</form>";
+            }else if($_SESSION["logged"]){      //Caso esteja logado, exibe os botões de admin:
+                echo "<div class='flexbox column'>"
+                        . "<button>Inserir Itens</button>"
+                        . "<button>Modificar/Excluir Itens</button>"
+                        . "<button onclick='location=".'"'.'admin.php?sair=true'.'"'."'>Sair</button>"
+                    . "</div>";
             }
         ?>
     </body>

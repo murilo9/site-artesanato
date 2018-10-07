@@ -13,3 +13,9 @@ CREATE TABLE tbItens(
     PRIMARY KEY (itId),
     FOREIGN KEY (stCategoria) REFERENCES tbCategorias(stNome)
 ) ENGINE=innodb;
+
+CREATE TABLE tbAdmins(
+	stLogin VARCHAR(30) NOT NULL,
+    stSenha VARCHAR(20) NOT NULL,
+    PRIMARY KEY (stLogin)
+) ENGINE=innodb;
