@@ -9,8 +9,14 @@
     </head>
     <body>
         <header>
-            <h1>Bebê Coelinho</h1>
-            <h3>Artesanato em Crochê</h3>
+            <div id="titulo">
+                <div>
+                    <img src="View/img/coelho.png">
+                </div><div>
+                    <h1>Bebê Coelinho</h1>
+                    <h3>Artesanato em Crochê</h3>
+                </div>
+            </div>
             <nav id="mobile">
                 <button onclick="location='index.php'">Categorias</button>
                 <button onclick="location='contato.php'">Contato</button>

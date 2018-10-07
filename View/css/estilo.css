@@ -12,6 +12,15 @@ header{
 header h1{
     margin: 0px;
 }
+#titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#titulo img{
+    width: 128px;
+}
 nav#desktop{
     display: none;
 }
@@ -40,10 +49,19 @@ body{
     margin-top: 8px;
 }
 @media only screen and (min-width: 480px){
+    #titulo{
+        flex-direction: row;
+    }
+    #titulo img{
+        width: 192px
+    }
     #content{
         flex-direction: row;
         margin-top: 8px;
         align-items: flex-start; 
+    }
+    section{
+        margin: 16px;
     }
     nav#mobile{
         display: none;
@@ -55,10 +73,12 @@ body{
         padding: 8px;
     }
     nav#desktop button{
-        background: #ffcc66;
-        padding: 16px;
+        color: white;
+        background: #660000;
+        padding: 20px;
         margin-bottom: 12px;
         border: none;
+        border-radius: 10px;
         font-family: Verdana;
         font-weight: bold;
     }
@@ -66,10 +86,9 @@ body{
         background: #ff9900;
     }
     aside{
-        height: 300px;
+        min-width: 300px;
+        height: 580px;
         margin: 0px;
-        padding-left: 48px;
-        padding-right: 48px;
     }
 }
 section{
