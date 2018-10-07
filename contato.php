@@ -3,7 +3,12 @@
     include_once 'View/_nav.php';
 ?>
 <section>
-    <h2>Contato</h2>
+    <article>
+        <h2>Contato</h2>
+        <p>
+            Lorem ipsum
+        </p>
+    </article>
 </section>
 <?php
     include_once 'View/_aside.php';
