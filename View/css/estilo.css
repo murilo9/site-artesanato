@@ -1,35 +1,43 @@
+@font-face{
+    font-family: titulo;
+    src: url(font.ttf);
+}
 header{
     text-align: center;
-    background: #99ff33;
+    background: #330000;
+    color: white;
     padding: 12px;
-    font-family: Arial;
+    font-family: titulo;
 }
 header h1{
     margin: 0px;
 }
-nav{
+nav#desktop{
+    display: none;
+}
+nav#mobile{
     display: flex;
     justify-content: space-around;
-    padding: 8px;
+    
 }
-nav button{
-    background: #00ff33;
-    padding: 8px;
+nav#mobile button{
+    color: white;
+    background: none;
     border: none;
-    font-family: Verdana;
-    font-weight: bold;
+    padding: 4px;
+    border-bottom: 1px dotted white;
 }
-nav button:active{
-    background: #009933;
+nav#mobile button:active{
+    background: #663300;
 }
 body{
     margin: 0px;
-    background: #ffff99;
 }
 #content{
     display: flex;
     flex-direction: column;
     font-family: Verdana;
+    margin-top: 8px;
 }
 @media only screen and (min-width: 480px){
     #content{
@@ -37,14 +45,25 @@ body{
         margin-top: 8px;
         align-items: flex-start; 
     }
-    nav{
-        flex-direction: column;
-        padding: 0px;
-        margin-left: 8px;
+    nav#mobile{
+        display: none;
     }
-    nav button{
-        margin-bottom: 8px;
-        padding: 20px;
+    nav#desktop{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8px;
+    }
+    nav#desktop button{
+        background: #ffcc66;
+        padding: 16px;
+        margin-bottom: 12px;
+        border: none;
+        font-family: Verdana;
+        font-weight: bold;
+    }
+    nav#desktop button:active{
+        background: #ff9900;
     }
     aside{
         height: 300px;
@@ -57,7 +76,7 @@ section{
     padding: 8px;
     margin: 8px;
     margin-top: 0px;
-    background: #33cc00;
+    background: #ffcc99;
 }
 article p{
     text-align: justify;
