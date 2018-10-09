@@ -2,12 +2,11 @@
 include_once '../Model/model.php';
 session_start();
 $token = $_POST["token"];
-switch ($token){
-    case "login":
+switch ($token){        //------ Verificação do token ------
+    case "login":           //LOGIN
         $login = $_POST["inputLogin"];
         $senha = $_POST["inputSenha"];
-        if(!dbConnect(1))
-            die('Erro no dbConnect');
+        dbConnect(1);
         $sql = "SELECT stSenha FROM tbAdmins WHERE stLogin='$login'";
         $query = $GLOBALS["con1"]->query($sql);
         if(!$query)
@@ -24,6 +23,9 @@ switch ($token){
             }
         }
         dbDisconnect();
+        break;
+    case 'insert':          //CADASTRAR ITEM
+        
         break;
     default:
         echo 'No token';

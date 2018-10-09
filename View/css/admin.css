@@ -1,9 +1,24 @@
-.flexbox{
-    display: flex;
+.main{
+    text-align: center;
 }
-.column{
-    flex-direction: column;
+form{
+    padding: 24px;
+    text-align: right;
 }
-.row{
-    flex-direction: row;
+form input, select, textarea{
+    margin-bottom: 8px;
+}
+body{
+    background: #660000;
+    color: white;
+    font-weight: bold;
+}
+body a, a:visited{
+    display: inline-block;
+    color: black;
+    background: #ffcc99;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 8px;
+    text-decoration: none;
 }
