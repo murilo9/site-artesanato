@@ -24,7 +24,7 @@
             }else if($_SESSION["logged"]){      //Caso esteja logado, exibe os botões de admin:
                 echo "<div class='main'>"
                         . "<a href='insert.php'>Inserir Itens</a><br>"
-                        . "<a>Modificar ou Excluir Itens</a><br>"
+                        . "<a href='pesquisa.php'>Modificar ou Excluir Itens</a><br>"
                         . "<a href='admin.php?sair=true'>Sair</a>"
                     . "</div>";
             }

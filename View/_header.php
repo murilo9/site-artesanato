@@ -11,7 +11,7 @@
         <header>
             <div id="titulo">
                 <div>
-                    <img src="View/img/coelho.png">
+                    <a href="admin.php"><img src="View/img/coelho.png"></a>
                 </div><div>
                     <h1>Bebê Coelhinho</h1>
                     <h3>Artesanato em Crochê</h3>

@@ -59,6 +59,9 @@
                 //Se chegou até aqui, deu tudo certo e exibe a mensagem de sucesso:
                 echo 'Item cadastrado com sucesso.<br><a href="../admin.php">Voltar</a>';
                 break;
+            case 'pesquisa':        //PESQUISAR ITEM
+                echo $_POST["categoria"];
+                break;
             default:
                 echo 'No token';
                 break;

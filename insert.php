@@ -27,14 +27,14 @@
                 header("location: admin.php");
                 die();
             }
-            echo '<h1>Cadastro de Item</h1>';
+            echo "<h1>Cadastro de Item</h1>";
             //Exibe o form de insert:
             echo "<form id='form' action='Controller/controller.php' method='post' enctype='multipart/form-data'>"
                     . "Nome: <input name='inputNome' id='inputNome' type='text'><br>"
                     . "Foto: <input name='arquivo' type='file' size='20'><br>"
                     . "Categoria: <select name='inputCategoria'>"
                     . "             <option value='Sapatinho'>Sapatinho</option>"
-                    . "             <option value='Casquinho'>Casaquinho</option>"
+                    . "             <option value='Casaquinho'>Casaquinho</option>"
                     . "             <option value='Vestido'>Vestido</option>"
                     . "             <option value='Sandália'>Sandália</option>"
                     . "             <option value='Chapéu'>Chapéu</option>"
