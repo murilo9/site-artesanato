@@ -13,7 +13,7 @@ body{
     color: white;
     font-weight: bold;
 }
-body a, a:visited{
+body a, a:visited, button{
     display: inline-block;
     color: black;
     background: #ffcc99;

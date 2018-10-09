@@ -34,7 +34,16 @@ function dbConnect($qnt){
 /**
  * Fecha todas as conexões com o BD
  */
-function dbDisconnect(){
-    mysqli_close($GLOBALS["con1"]);
-    mysqli_close($GLOBALS["con2"]);
+function dbDisconnect($qtd){
+    switch ($qtd){
+        case 1:
+            mysqli_close($GLOBALS["con1"]);
+            break;
+        case 2:
+            mysqli_close($GLOBALS["con1"]);
+            mysqli_close($GLOBALS["con2"]);
+            break;
+        default:
+    }
+    
 }
