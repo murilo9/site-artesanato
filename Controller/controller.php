@@ -67,6 +67,32 @@
                     echo 'Item excluído do cadastro com sucesso.<br><a href="../pesquisa.php">Voltar</a>';
                 }
                 break;
+            case 'modifica':    //MODIFICA ITEM
+                $itemId = $_POST["inputId"];
+                $itemNome = $_POST["inputNome"];
+                $itemDescricao = $_POST["inputDescri"];
+                $itemCategoria =$_POST["inputCategoria"];
+                $itemFoto = '';
+                $mudarFoto = false;
+                if(isset($_POST["mudarFoto"])){
+                    if($_POST["mudarFoto"] == 'true'){
+                        $mudarFoto = true;
+                        $uploadDir = '../itens/fotos/';
+                        $file = $_FILES["arquivo"]["name"];
+                        $itemFoto = $file;
+                        $uploadFile =$uploadDir.$file;
+                        if(!move_uploaded_file($_FILES["arquivo"]["tmp_name"], $uploadFile)){
+                            echo 'Erro ao fazer upload da imagem.<br><a href="../admin.php">Voltar</a>';
+                            break;
+                        }
+                    }
+                }
+                if(!modificaItem($itemId,$itemNome,$itemDescricao,$mudarFoto,$itemFoto,$itemCategoria)){
+                    echo '<a href="admin.php">Voltar</a>';
+                }else{
+                    echo 'Item modificado com sucesso.<br><a href="../admin.php">Voltar</a>';
+                }
+                break;
             default:
                 echo 'No token';
                 break;

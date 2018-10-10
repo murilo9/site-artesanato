@@ -4,21 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="View/css/admin.css">
-        <script>
-            function cadastrar(){
-                var form = document.getElementById("form");
-                if(document.getElementById("inputNome").value == ''){   //Verifica nome vazio
-                    alert('Insira um nome para o item.');
-                    return false;
-                }
-                if(document.getElementById("inputDescri").value == ''){   //Verifica descrição vazia
-                    alert('Insira uma descrição para o item.');
-                    return false;
-                }
-                document.getElementById("inputId").value = '_'+Math.floor(Math.random()*9999);  //Gera ID aleatório
-                form.submit();
-            }
-        </script>
+        <script src="View/js/scripts.js"></script>
     </head>
     <body>
         <?php
