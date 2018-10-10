@@ -103,7 +103,20 @@ article p{
     border-left: 4px solid gray;
     padding-left: 8px;
 }
+article img{
+    width: 80%;
+}
 aside{
     border: 1px solid black;
     margin: 8px;
+}
+#categorias button{
+    color: #ff9900;
+    background: none;
+    border: none;
+    margin: 8px;
+    border-bottom: 1px dotted white;
+}
+#categorias button:active{
+    background: #663300;
 }
