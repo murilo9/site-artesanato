@@ -43,7 +43,7 @@
                     . "Descrição</textarea><br>"
                     . "<input type='hidden' name='token' value='insert'>"
                     . "<input type='hidden' name='inputId' id='inputId'>"
-                    . "</form><button onclick='cadastrar()'>Cadastrar</button>"
+                    . "</form><br><button onclick='cadastrar()'>Cadastrar</button>"
                     . "<a href='admin.php'>Cancelar</a></div>";
         ?>
 

@@ -12,7 +12,7 @@ function cadastraItem($id, $nome, $categoria, $foto, $descricao){
     }
     dbDisconnect(1);
     //Cria arquivo com a descrição:
-    $arquivoAberto = fopen("../itens/descri/$id",'w');
+    $arquivoAberto = fopen("../itens/descri/$id.php",'w');
     if(!$arquivoAberto){
         echo 'Erro ao criar arqivo de descrição(fopen).<br>';
         return false;

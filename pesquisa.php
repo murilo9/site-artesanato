@@ -24,6 +24,10 @@
                     . "</div><br>";
             echo "<div id='resultado'></div>";
         ?>
+        <form id='formExclui' action="Controller/controller.php" method='post'>
+            <input name='itemId' type='hidden' id="itemId">
+            <input name='token' type="hidden" value="exclui">
+        </form>
         <script>
             var inputSelect = document.getElementById("inputCategoria");    //Pega o select
             var resultado = document.getElementById("resultado");
@@ -43,6 +47,14 @@
             inputSelect.onchange = function(){   //Função de fazer consulta ao escolher select
                 loadDoc();
             };
+            
+            function excluiItem(item){      //Exclui um item do DB
+                var formulario = document.getElementById("formExclui");
+                if(confirm('Tem certeza que deseja excluir este item do cadastro?')){
+                    document.getElementById("itemId").value = item;     //Atribui a ID do item ao input da form
+                    formulario.submit();        //Dá submit na form
+                }
+            }
         </script>
     </body>
 </html>

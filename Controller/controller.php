@@ -57,10 +57,15 @@
                     echo '<a href="../admin.php">Voltar</a>';
                 }
                 //Se chegou até aqui, deu tudo certo e exibe a mensagem de sucesso:
-                echo 'Item cadastrado com sucesso.<br><a href="../admin.php">Voltar</a>';
+                echo 'Item cadastrado com sucesso.<br><a href="../insert.php">Voltar</a>';
                 break;
-            case 'pesquisa':        //PESQUISAR ITEM
-                echo $_POST["categoria"];
+            case 'exclui':      //EXCLUIR ITEM
+                $itemId = $_POST["itemId"];
+                if(!excluiItem($itemId)){
+                    echo '<a href="../pesquisa.php">Voltar</a>';
+                }else{
+                    echo 'Item excluído do cadastro com sucesso.<br><a href="../pesquisa.php">Voltar</a>';
+                }
                 break;
             default:
                 echo 'No token';
