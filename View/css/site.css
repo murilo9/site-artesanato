@@ -61,8 +61,17 @@ body{
         align-items: flex-start; 
     }
     section{
-        margin: 16px;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        margin: 16px !important;
+        margin-bottom: 48px !important;
         width: 70%;
+    }
+    article{
+        margin-bottom: 48px;
+    }
+    article img{
+        width: 600px !important;
     }
     nav#mobile{
         display: none;

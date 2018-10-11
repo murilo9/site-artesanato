@@ -33,7 +33,7 @@
             //Exibe os articles:
             echo "<article><h2>$itemNome</h2>"
                     . "<img src='itens/fotos/$itemFoto'>"
-                    . "<p>$itemDescricao</p></article>";
+                    . "<p>$itemDescricao</p></article><hr>";
         }
     }
     dbDisconnect(1);
